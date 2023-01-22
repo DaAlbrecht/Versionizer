@@ -1,0 +1,12 @@
+apiVersion: mepflix.iss.ch.my.domain/v1
+kind: Versionizer
+metadata:
+  labels:
+    app.kubernetes.io/name: versionizer
+    app.kubernetes.io/instance: versionizer-sample
+    app.kubernetes.io/part-of: k8s
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: k8s
+  name: versionizer-sample
+spec:
+  # TODO(user): Add fields here

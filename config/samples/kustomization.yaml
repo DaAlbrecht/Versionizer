@@ -1,0 +1,4 @@
+## Append samples you want in your CSV to this file as resources ##
+resources:
+- mepflix.iss.ch_v1_versionizer.yaml
+#+kubebuilder:scaffold:manifestskustomizesamples

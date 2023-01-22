@@ -1,0 +1,27 @@
+# permissions for end users to view versionizers.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: versionizer-viewer-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: k8s
+    app.kubernetes.io/part-of: k8s
+    app.kubernetes.io/managed-by: kustomize
+  name: versionizer-viewer-role
+rules:
+- apiGroups:
+  - mepflix.iss.ch.my.domain
+  resources:
+  - versionizers
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - mepflix.iss.ch.my.domain
+  resources:
+  - versionizers/status
+  verbs:
+  - get
